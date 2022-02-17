@@ -39,9 +39,8 @@ export default function Home() {
   const [online, setOnline] = useState(false);
 
   useEffect(async () => {
-    const discord = await axios.get("/api/members");
-
-    console.log(discord, discord.members, discord.online);
+    const resp = await axios.get("/api/members");
+    const discord = resp.data;
 
     if (discord) setMembers(discord.members.toLocaleString());
     if (discord) setOnline(discord.online.toLocaleString());
