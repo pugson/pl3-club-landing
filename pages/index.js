@@ -41,8 +41,8 @@ export default function Home() {
   useEffect(async () => {
     const { members, online } = await axios.get(`/api/members`);
 
-    setMembers(members.toLocaleString());
-    setOnline(online.toLocaleString());
+    if (members) setMembers(members.toLocaleString());
+    if (online) setOnline(online.toLocaleString());
   }, []);
 
   return (
