@@ -35,14 +35,15 @@ const UserIcon = () => (
 );
 
 export default function Home() {
-  const discord = axios.get("/api/members");
   const [members, setMembers] = useState(false);
   const [online, setOnline] = useState(false);
 
   useEffect(async () => {
+    const discord = axios.get("/api/members");
+
     if (discord.members) setMembers(discord.members.toLocaleString());
     if (discord.online) setOnline(discord.online.toLocaleString());
-  }, [discord, members, online]);
+  }, [members, online]);
 
   return (
     <div>

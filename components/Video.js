@@ -9,7 +9,7 @@ export default function Video() {
     if (typeof window !== "undefined") {
       setTimeout(() => {
         emojiCursor();
-      }, 4000);
+      }, 6000);
     }
 
     return (
