@@ -4,7 +4,6 @@ import emojiCursor from "./emojiCursor";
 
 export default function Video() {
   const isDesktop = useMedia({ query: "(min-width: 900px)" });
-  console.log(isDesktop);
 
   if (!!isDesktop) {
     if (typeof window !== "undefined") {
