@@ -41,9 +41,11 @@ export default function Home() {
   useEffect(async () => {
     const discord = axios.get("/api/members");
 
-    if (discord.members) setMembers(discord.members.toLocaleString());
-    if (discord.online) setOnline(discord.online.toLocaleString());
-  }, [members, online]);
+    console.log(discord, discord.members, discord.online);
+
+    if (discord) setMembers(discord.members.toLocaleString());
+    if (discord) setOnline(discord.online.toLocaleString());
+  }, []);
 
   return (
     <div>
