@@ -46,8 +46,8 @@ export default function Home() {
     const members = data.approximate_member_count;
     const online = data.approximate_presence_count;
 
-    setMembers(members);
-    setOnline(online);
+    setMembers(members.toLocaleString());
+    setOnline(online.toLocaleString());
   }, []);
 
   return (
