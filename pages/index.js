@@ -23,7 +23,7 @@ export default function Home() {
             duration: 0.5,
           },
           y: {
-            delay: 4,
+            delay: 3,
           },
         }}
       >
@@ -35,7 +35,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 4, duration: 0.25 }}
+          transition={{ delay: 3, duration: 0.25 }}
         >
           <div className="pl3-logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="128" viewBox="0 0 290 175">
@@ -49,10 +49,10 @@ export default function Home() {
             </svg>
           </div>
         </motion.div>
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 4 }}>
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 3 }}>
           <h2>Crypto + NFT</h2>
         </motion.div>
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 4.15 }}>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3.15, duration: 1 }}>
           <div className="server-stats">
             <div className="members">
               <svg
@@ -81,7 +81,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, scale: 1.25 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 4.85 }}
+          transition={{ delay: 3.85 }}
         >
           <div className="join-container">
             <a href="https://discord.com/invite/nwMzftWJt7" className="join-button">
