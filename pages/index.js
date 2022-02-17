@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import Head from "next/head";
+import axios from "axios";
 import { motion } from "framer-motion";
 
 import Video from "../components/Video";
@@ -33,6 +35,21 @@ const UserIcon = () => (
 );
 
 export default function Home() {
+  const [members, setMembers] = useState(false);
+  const [online, setOnline] = useState(false);
+
+  useEffect(async () => {
+    const discord = await axios.get(
+      `https://discord.com/api/v9/invites/nwMzftWJt7?with_counts=true&with_expiration=true`
+    );
+    const data = discord.data;
+    const members = data.approximate_member_count;
+    const online = data.approximate_presence_count;
+
+    setMembers(members);
+    setOnline(online);
+  }, []);
+
   return (
     <div>
       <Head>
@@ -58,18 +75,20 @@ export default function Home() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 3 }}>
             <h2>Crypto + NFT</h2>
           </motion.div>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3.15, duration: 1 }}>
-            <div className="server-stats">
-              <div className="members">
-                <UserIcon />
-                <span>900</span>
+          {members && (
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3.15, duration: 1 }}>
+              <div className="server-stats">
+                <div className="members">
+                  <UserIcon />
+                  <span>{members}</span>
+                </div>
+                <span>‏‎ ‎•‏‎ ‎</span>
+                <div className="online-members">
+                  <span>{online} online</span>
+                </div>
               </div>
-              <span>‏‎ ‎•‏‎ ‎</span>
-              <div className="online-members">
-                <span>42 online</span>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          )}
 
           <motion.div
             initial={{ opacity: 0, scale: 1.25 }}
