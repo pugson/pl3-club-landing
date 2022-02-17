@@ -1,3 +1,5 @@
+![pl3.club](https://github.com/pugson/pl3-club-landing/blob/main/public/pl3-meta.jpg?raw=true)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
