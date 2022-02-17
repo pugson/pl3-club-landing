@@ -1,0 +1,111 @@
+/* This is some crappy code. Don’t look. */
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol;
+  scroll-behavior: smooth;
+  background: black;
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  transform: translateX(-1.8%);
+  z-index: 1;
+  position: relative;
+}
+
+.ui-container {
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: -0.75rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  margin: 1rem 0;
+  color: #555;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.server-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.members {
+  display: flex;
+  align-items: center;
+}
+
+.members span {
+  padding-left: 0.25rem;
+}
+
+.online-members {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.join-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.join-button {
+  display: block;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  background: hsla(236, 85%, 60%, 1);
+  color: white;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: 0.15s ease all;
+}
+
+.join-button:hover,
+.join-button:focus {
+  transform: scale(1.05);
+}
+
+.join-button:active {
+  transform: scale(0.98);
+}
