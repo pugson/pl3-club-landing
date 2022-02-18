@@ -55,7 +55,7 @@ export default function Home() {
         <meta property="og:title" content="PL3 (Crypto + NFT)" />
         <meta property="og:description" content="Polskie community Web3" />
         <meta property="og:url" content="https://pl3.club" />
-        <meta property="og:image" content="/pl3-meta.jpg" />
+        <meta property="og:image" content="https://pl3.club/pl3-meta.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className="page">
