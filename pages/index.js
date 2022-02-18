@@ -72,7 +72,7 @@ export default function Home() {
             <h2>Crypto + NFT</h2>
           </motion.div>
           {members && (
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3.15, duration: 1 }}>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.5, duration: 1 }}>
               <div className="server-stats">
                 <div className="members">
                   <UserIcon />

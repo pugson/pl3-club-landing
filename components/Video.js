@@ -9,7 +9,7 @@ export default function Video() {
     if (typeof window !== "undefined") {
       setTimeout(() => {
         emojiCursor();
-      }, 6000);
+      }, 4000);
     }
 
     return (
@@ -27,7 +27,7 @@ export default function Video() {
             },
           }}
         >
-          <video src="/pl3-web.mp4" muted autoPlay loop playsInline></video>
+          <video src="/pl3-web-v2.mp4" muted autoPlay loop playsInline></video>
         </motion.div>
       </div>
     );
@@ -47,7 +47,7 @@ export default function Video() {
         },
       }}
     >
-      <video src="/pl3-web.mp4" muted autoPlay loop playsInline></video>
+      <video src="/pl3-web-v2.mp4" muted autoPlay loop playsInline></video>
     </motion.div>
   );
 }

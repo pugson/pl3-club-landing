@@ -37,7 +37,6 @@ video {
   width: 100%;
   max-width: 900px;
   height: auto;
-  transform: translateX(-1.8%);
   z-index: 1;
   position: relative;
   user-select: none;
