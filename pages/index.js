@@ -89,7 +89,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, scale: 1.25 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 3.85 }}
+            transition={{ delay: 2.85 }}
           >
             <div className="join-container">
               <a href="https://discord.com/invite/nwMzftWJt7" className="join-button">
